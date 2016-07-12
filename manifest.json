@@ -1,0 +1,38 @@
+{
+
+	"manifest_version": 2,
+
+	"name": "PsB",
+	"description": "Extension for /r/photoshopbattles",
+	"version": "1.0",
+
+	"web_accessible_resources": [
+		"jquery-2.2.0.min.js",
+		"psb.js"
+	],
+  
+	"permissions": [
+		"*://*.reddit.com/r/photoshopbattles/*",
+		"webNavigation",
+		"webRequest",
+		"tabs"
+	],
+
+	"background": {
+			"scripts": [
+				"psb.js"
+			]
+		},
+	"content_scripts": [
+		{
+			"matches": [
+				"*://*.reddit.com/r/photoshopbattles/*"
+			],
+			"js": [
+				"jquery-2.2.0.min.js",
+				"psb.js"
+			]
+        	}
+    	]
+   
+}
